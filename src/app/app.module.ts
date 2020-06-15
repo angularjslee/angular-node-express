@@ -2,13 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputUserDataFormComponent,
+    DisplayUserDataComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
