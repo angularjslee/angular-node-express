@@ -6,6 +6,13 @@ import { InputUserDataFormComponent } from './input-user-data-form/input-user-da
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
 
+import {Routes, RouterModule} from '@angular/router';
+
+const routes: Routes = <Routes>[
+  {path: '', component: InputUserDataFormComponent},
+  {path: 'user/:uid', component: DisplayUserDataComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,9 +22,12 @@ import { DisplayUserDataComponent } from './display-user-data/display-user-data.
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+}

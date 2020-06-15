@@ -8,17 +8,22 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <p>input-user-data-form works!</p>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12">
-      <h1>Register User</h1>
-      <app-input-user-data-form></app-input-user-data-form>
+      <!--<app-input-user-data-form></app-input-user-data-form>-->
+      <router-outlet></router-outlet>
+
     </div>
-    <div class="col-xs-12">
-      <app-display-user-data></app-display-user-data>
-    </div>
+    <!--<div class="col-xs-12">-->
+      <!--<h1>User Information</h1>-->
+      <!--<app-display-user-data></app-display-user-data>-->
+    <!--</div>-->
   </div>
 </div>
+
+
 <!--
 <style>
   :host {
